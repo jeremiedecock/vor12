@@ -9,6 +9,8 @@ It uses two [Dynamixel AX-12](http://support.robotis.com/en/product/dynamixel/ax
 actuators and the [OpenCV](http://opencv.org/) computer vision library for
 object tracking experiments. 
 
+![Photo 1](http://download.tuxfamily.org/jdhp/image/vor12-1.jpeg)
+
 ## License
 
 VOR12 is distributed under the [MIT License](http://opensource.org/licenses/MIT).
