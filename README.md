@@ -4,8 +4,10 @@ Copyright (c) 2015 Jeremie DECOCK (http://www.jdhp.org)
 
 ## Description
 
-The Vor12 project is a mobile video camera, using two Dynamixel AX-12 actuators
-and the OpenCV computer vision library for object tracking experiments. 
+The Vor12 project is a mobile video camera.
+It uses two [Dynamixel AX-12](http://support.robotis.com/en/product/dynamixel/ax_series/dxl_ax_actuator.htm)
+actuators and the [OpenCV](http://opencv.org/) computer vision library for
+object tracking experiments. 
 
 ## License
 
