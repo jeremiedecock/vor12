@@ -20,12 +20,10 @@ See: https://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_im
 """
 
 # TODO:
-# - [ ] Image mortphologie (dilatation, erosion, ...)
 # - [ ] Améliorer la gestion multithread Tkinter + OpenCV (sortie, ...)
 # - [ ] Ajouter un Label à côté des scales Tkinter
 # - [ ] Afficher dans une fenetre à part les couleurs "frame_lower_color" et "frame_upper_color"
 # - [ ] Afficher le canny edge detector utilisé en interne par Hough Circle Transform
-# - [ ] 
 
 from __future__ import print_function
 
