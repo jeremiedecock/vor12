@@ -35,13 +35,13 @@ import argparse
 import Tkinter as tk
 import threading
 
-DEFAULT_LOWER_BLUE_H = 105   # 110   # 105
-DEFAULT_LOWER_BLUE_S = 135   # 50    # 135
-DEFAULT_LOWER_BLUE_V = 68    # 50    # 68
+DEFAULT_LOWER_COLOR_H = 105   # 110   # 105
+DEFAULT_LOWER_COLOR_S = 135   # 50    # 135
+DEFAULT_LOWER_COLOR_V = 68    # 50    # 68
                             
-DEFAULT_UPPER_BLUE_H = 120   # 130   # 120
-DEFAULT_UPPER_BLUE_S = 220   # 255   # 220
-DEFAULT_UPPER_BLUE_V = 180   # 255   # 180
+DEFAULT_UPPER_COLOR_H = 120   # 130   # 120
+DEFAULT_UPPER_COLOR_S = 220   # 255   # 220
+DEFAULT_UPPER_COLOR_V = 180   # 255   # 180
 
 DEFAULT_HCT_ACCUMULATOR_RESOLUTION = 1.2
 DEFAULT_HCT_CANNY_EDGE_THRESHOLD = 50
@@ -88,13 +88,13 @@ def main():
     scale_hct_min_radius = tk.Scale(frame_hct, from_=0, to=255, orient=tk.HORIZONTAL)
     scale_hct_max_radius = tk.Scale(frame_hct, from_=0, to=255, orient=tk.HORIZONTAL)
 
-    scale_lower_color_H.set(DEFAULT_LOWER_BLUE_H)
-    scale_lower_color_S.set(DEFAULT_LOWER_BLUE_S)
-    scale_lower_color_V.set(DEFAULT_LOWER_BLUE_V)
+    scale_lower_color_H.set(DEFAULT_LOWER_COLOR_H)
+    scale_lower_color_S.set(DEFAULT_LOWER_COLOR_S)
+    scale_lower_color_V.set(DEFAULT_LOWER_COLOR_V)
 
-    scale_upper_color_H.set(DEFAULT_UPPER_BLUE_H)
-    scale_upper_color_S.set(DEFAULT_UPPER_BLUE_S)
-    scale_upper_color_V.set(DEFAULT_UPPER_BLUE_V)
+    scale_upper_color_H.set(DEFAULT_UPPER_COLOR_H)
+    scale_upper_color_S.set(DEFAULT_UPPER_COLOR_S)
+    scale_upper_color_V.set(DEFAULT_UPPER_COLOR_V)
 
     scale_hct_accumulator_resolution.set(DEFAULT_HCT_ACCUMULATOR_RESOLUTION)
     scale_hct_canny_edge_threshold.set(DEFAULT_HCT_CANNY_EDGE_THRESHOLD)
