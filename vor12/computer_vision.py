@@ -39,6 +39,9 @@ HCT_ACCUMULATOR_THRESHOLD = 10
 HCT_MIN_RADIUS = 0
 HCT_MAX_RADIUS = 0
 
+MOTIONLESS_AREA_X_RATIO = 0.3  # Ratio of the motionless area on the image width (should be between 0.0 and 1.0)
+MOTIONLESS_AREA_Y_RATIO = 0.3  # Ratio of the motionless area on the image height (should be between 0.0 and 1.0)
+
 def main():
 
     # Parse the programm options (get the path of the image file to read) #####
@@ -133,16 +136,94 @@ def main():
         #circles = cv.HoughCircles(img_mask, method, dp, min_dist)
         circles = cv.HoughCircles(img_mask, method, dp, min_dist, param1=canny_edge_threshold, param2=accumulator_threshold, minRadius=min_radius, maxRadius=max_radius)
 
-        # DRAW CIRCLES ####################################
+        # DRAW THE MOTIONLESS AREA ########################
+
+        image_height = img_bgr.shape[0]
+        image_width = img_bgr.shape[1]
+
+        motionless_area_width = image_width * MOTIONLESS_AREA_X_RATIO
+        motionless_area_height = image_height * MOTIONLESS_AREA_Y_RATIO
+
+        motionless_area_range_x = (int((image_width - motionless_area_width)/2),   int(image_width - (image_width - motionless_area_width)/2))
+        motionless_area_range_y = (int((image_height - motionless_area_height)/2), int(image_height - (image_height - motionless_area_height)/2))
+
+        color = (0, 0, 255)
+        thickness = 1
+        cv.rectangle(img_bgr, (motionless_area_range_x[0], motionless_area_range_y[0]), (motionless_area_range_x[1], motionless_area_range_y[1]), color, thickness)
+
+        # CONTROL AND DRAW ################################
 
         if circles is not None:
             circles = np.uint16(np.around(circles))
-            for i in circles[0,:]:
-                # draw the outer circle
-                cv.circle(img_bgr, (i[0], i[1]), i[2], (0,255,0), 2)
 
-                # draw the center of the circle
-                cv.circle(img_bgr, (i[0], i[1]), 2, (0,0,255), 3)
+            if circles.shape[1] > 1:
+                raise Exception("Error: more than 1 circle have been found ; increase the min_dist parameter.")
+
+            circle = circles[0, 0]
+
+            target_center = (circle[0], circle[1])
+            target_radius = circle[2]
+
+            # Draw the outer circle
+            center_point = (target_center[0], target_center[1])
+            radius = target_radius
+            color = (0, 255, 0)
+            thickness = 2
+            line_type = cv.CV_AA  # Anti-Aliased
+            cv.circle(img_bgr, center_point, radius, color, thickness, line_type)
+
+            # Draw the center of the circle
+            center_point = (target_center[0], target_center[1])
+            radius = 2
+            color = (0, 0, 255)
+            thickness = 3
+            line_type = cv.CV_AA  # Anti-Aliased
+            cv.circle(img_bgr, center_point, radius, color, thickness, line_type)
+
+            # Add text coordinates
+            text = "{0}, {1}, {2}".format(target_center[0], target_center[1], target_radius)
+            start_point = (15, 50)
+            font = cv.FONT_HERSHEY_SIMPLEX
+            font_scale = 0.75
+            color = (0, 0, 255)
+            thickness = 2
+            line_type = cv.CV_AA  # Anti-Aliased
+            cv.putText(img_bgr, text, start_point, font, font_scale, color, thickness, line_type)
+
+            # Control
+            cmd_x = 0
+            if target_center[0] < motionless_area_range_x[0]:
+                cmd_x = 1
+            elif target_center[0] > motionless_area_range_x[1]:
+                cmd_x = -1
+
+            cmd_y = 0
+            if target_center[1] < motionless_area_range_y[0]:
+                cmd_y = 1
+            elif target_center[1] > motionless_area_range_y[1]:
+                cmd_y = -1
+
+            # Add text coordinates
+            cmd_text = ""
+
+            if cmd_y > 0:
+                cmd_text += "up "
+            elif cmd_y < 0:
+                cmd_text += "down "
+
+            if cmd_x > 0:
+                cmd_text += "right"
+            elif cmd_x < 0:
+                cmd_text += "left"
+
+            start_point = (15, 100)
+            font = cv.FONT_HERSHEY_SIMPLEX
+            font_scale = 0.75
+            color = (0, 0, 255)
+            thickness = 2
+            line_type = cv.CV_AA  # Anti-Aliased
+            cv.putText(img_bgr, cmd_text, start_point, font, font_scale, color, thickness, line_type)
+            
 
         # DISPLAY IMAGES ##################################
 
