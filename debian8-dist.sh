@@ -27,7 +27,7 @@ Priority: optional
 Maintainer: Jérémie DECOCK <jd.jdhp@gmail.com>
 Architecture: all
 Depends: python (>= 3.0), pyax12, python-opencv, python-numpy
-Description: Controle a mobile video camera. VOR12 uses two Dynamixel AX-12 actuators and the OpenCV computer vision library for object tracking experiments. 
+Description: The Vor12 project, a mobile video camera created for object tracking experiments.
 EOF
 
 fakeroot dpkg-deb -b debian

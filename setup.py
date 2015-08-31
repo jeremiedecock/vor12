@@ -97,9 +97,7 @@ setup(author='Jeremie DECOCK',
       maintainer_email='jd.jdhp@gmail.com',
 
       name='vor12',
-      description=("Controle a mobile video camera. VOR12 uses two Dynamixel "
-                   "AX-12 actuators and the OpenCV computer vision library "
-                   "for object tracking experiments."),
+      description="The Vor12 project, a mobile video camera created for object tracking experiments.",
       long_description=get_long_description(),
       url='http://www.jdhp.org/',
       download_url='http://www.jdhp.org/',# Where the package can be downloaded
