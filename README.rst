@@ -32,9 +32,9 @@ Note:
 Bug reports
 ===========
 
-To search for bugs or report them, please use the PyAX-12 Bug Tracker at:
+To search for bugs or report them, please use the VoR12 Bug Tracker at:
 
-    https://github.com/jeremiedecock/pyax12/issues
+    https://github.com/volab/vor12/issues
 
 
 License
