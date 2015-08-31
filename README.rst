@@ -6,10 +6,10 @@ Copyright (c) 2015 Jeremie DECOCK (http://www.jdhp.org)
 
 
 * Web site: http://www.jdhp.org/projects_en.html#vor12
-.. * Online documentation: http://vor12.readthedocs.org
-* Source code: https://github.com/jeremiedecock/vor12
-* Issue tracker: https://github.com/jeremiedecock/vor12/issues
+* Source code: https://github.com/volab/vor12
+* Issue tracker: https://github.com/volab/vor12/issues
 * VoR12 on PyPI: https://pypi.python.org/pypi/vor12
+.. * Online documentation: http://vor12.readthedocs.org
 
 
 Description
