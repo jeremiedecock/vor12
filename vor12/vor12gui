@@ -1,0 +1,118 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+# VoR12
+
+# The MIT License
+#
+# Copyright (c) 2015 Jeremie DECOCK (http://www.jdhp.org)
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+"""
+Vor12
+
+Required: pyax12, numpy and opencv libraries
+          (Debian: aptitude install python-numpy python-opencv)
+"""
+
+# See: http://python-future.org/compatible_idioms.html
+from __future__ import print_function
+from __future__ import unicode_literals
+
+import argparse
+import cv2 as cv
+
+import vor12.computer_vision.circle_detection as circle_detection
+import vor12.controller.rule_based_controller as rule_based_controller
+
+def main():
+
+    # Parse the programm options (get the path of the image file to read) #####
+
+    parser = argparse.ArgumentParser(description='An opencv snippet.')
+    parser.add_argument("--cameraid", "-i",
+                        help="The camera ID number (default: 0)",
+                        type=int, default=0, metavar="INTEGER")
+    args = parser.parse_args()
+
+    device_number = args.cameraid
+
+    # OpenCV ##################################################################
+
+    camera = circle_detection.CircleDetection(device_number)
+
+    (image_width, image_height) = camera.get_image_size()
+    controller = rule_based_controller.RuleBasedController(image_width, image_height)
+
+    print("Press q to quit.")
+
+    while True:
+
+        # GET PERCEPTS ####################################
+
+        percept_vect = camera.get_percept()
+        control_vect = None
+
+        if percept_vect is not None:
+
+            # FILTER PERCEPTS #################################
+
+            # TODO
+            #percept_vect = filtrer(percept_vect)
+
+            # COMPUTE CONTROL #################################
+
+            control_vect = controller.compute_control(percept_vect)
+            print(control_vect)
+
+            # FILTER CONTROL ##################################
+
+            # TODO
+            #control_vect = filtrer(control_vect)
+
+            # APPLY CONTROL ###################################
+
+            # TODO
+            #actuator.apply_control(control_vect)
+
+
+        # SHOW IMAGES #####################################
+
+        # Add informations on images
+        camera.draw_image(camera.img_bgr, percept_vect)
+        controller.draw_image(camera.img_bgr, control_vect)
+
+        # Display the resulting frame (Mask)
+        cv.imshow('Mask', camera.img_mask)
+
+        # Display the resulting frame (BGR)
+        cv.imshow('BGR', camera.img_bgr)
+
+
+        # KEYBOARD LISTENER ###############################
+
+        if cv.waitKey(1) & 0xFF == ord('q'):
+            # Exit
+            break
+
+
+if __name__ == '__main__':
+    main()
+

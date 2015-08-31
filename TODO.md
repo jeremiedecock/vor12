@@ -16,6 +16,7 @@
 - [ ] Add a Kalman filter to stabilize the sensor input (create a generic
       SensorFilter class to try other filters like particle filters)
 - [ ] Make longer Dynamixel cables
+- [ ] Use a cross platform configuration file to save opencv calibration data (thresholds, ...)
 - [ ] Add Kicad files
 - [ ] Add OpenSCAD files
 
