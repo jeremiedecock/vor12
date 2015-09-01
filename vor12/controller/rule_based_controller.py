@@ -58,14 +58,15 @@ class RuleBasedController(object):
     def compute_control(self, percept):
         target_center = np.array([percept[0], percept[1]])
 
-        # Control on the x axis
+        # Control on the x axis (left/right position)
         ctrl_x = 0
         if target_center[0] < self.motionless_area_range_x[0]:
-            ctrl_x = 1
-        elif target_center[0] > self.motionless_area_range_x[1]:
             ctrl_x = -1
+        elif target_center[0] > self.motionless_area_range_x[1]:
+            ctrl_x = 1
 
-        # Control on the y axis
+        # Control on the y axis (up/down position)
+        # Warning: with OpenCV, the y axis is inverted (i.e. 0 is at the top)!
         ctrl_y = 0
         if target_center[1] < self.motionless_area_range_y[0]:
             ctrl_y = 1
@@ -79,6 +80,7 @@ class RuleBasedController(object):
 
 
     def draw_image(self, image, control_vect):
+        # TODO: move this in the main script ?
 
         # Draw the motionless area
         color = (0, 0, 255)
