@@ -98,7 +98,7 @@ class DynamixelAX12(object):
         # The z_axis controls left/right movements
         # Warning: movements are inverted on the z axis
         #          (negative commands move the frame to the right)
-        new_pos_z = pos_x - control_vect[0]
+        new_pos_z = pos_z - control_vect[0]
 
         #try:
         self.connection.goto(self.dynamixel_x_axis_id, new_pos_x, speed=512)
