@@ -69,21 +69,18 @@ INSTALL_REQUIRES = ['pyax12', 'numpy']
 #INSTALL_REQUIRES = []
 
 
+SCRIPTS = ["scripts/vor12gui"]
+
+
 # Entry point can be used to create plugins or to automatically generate
 # system commands to call specific functions.
 # Syntax: "name_of_the_command_to_make = package.module:function".
-if 'setuptools' in sys.modules:
-    SCRIPTS = []
-
-    ENTRY_POINTS = {
-      'console_scripts': [
-          'vor12gui = vor12.vor12gui:main',
-      ],
-    }
-else:
-    SCRIPTS = ["vor12/vor12gui"]
-
-    ENTRY_POINTS = {}
+ENTRY_POINTS = {}
+#ENTRY_POINTS = {
+#  'console_scripts': [
+#      'vor12gui = vor12.vor12gui:main',
+#  ],
+#}
 
 
 README_FILE = 'README.rst'

@@ -4,6 +4,7 @@ include debian-dist.sh
 include *.txt
 include *.rst
 include *.md
+recursive-include scripts *
 recursive-include docs *
 recursive-include opencv_tests_and_calibration_scripts *.py
 recursive-include tests *
