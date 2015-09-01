@@ -31,6 +31,13 @@ __all__ = ['DynamixelAX12']
 class DynamixelAX12(object):
 
     def __init__(self):
+        # TODO: set CW_ANGLE_LIMIT and CCW_ANGLE_LIMIT (+ alarms)
+        #       (+ memorize the original values to set them back)
+        pass
+
+
+    def __del__(self):
+        # TODO: set CW_ANGLE_LIMIT and CCW_ANGLE_LIMIT (+ alarms)
         pass
 
 
