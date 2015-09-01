@@ -45,5 +45,5 @@ The ``VoR12`` library is provided under the terms and conditions of the
 .. _Dynamixel AX-12: http://support.robotis.com/en/product/dynamixel/ax_series/dxl_ax_actuator.htm
 .. _OpenCV: http://opencv.org/
 
-.. |Photo 1| image:: http://download.tuxfamily.org/jdhp/image/vor12-2.jpeg
+.. |Photo 1| image:: http://download.tuxfamily.org/jdhp/image/small_vor12-2.jpeg
 .. _Photo 1: http://download.tuxfamily.org/jdhp/image/vor12-2.jpeg
