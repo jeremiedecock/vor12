@@ -39,6 +39,7 @@ from __future__ import unicode_literals
 import argparse
 import cv2 as cv
 
+#from vor12.actuator import fake
 from vor12.actuator import dynamixel_ax12
 from vor12.computer_vision import circle_detection
 from vor12.controller import rule_based_controller
@@ -57,6 +58,7 @@ def main():
 
     # OpenCV ##################################################################
 
+    #actuators = fake.FakeActuator()
     actuators = dynamixel_ax12.DynamixelAX12()
 
     camera = circle_detection.CircleDetection(device_number)

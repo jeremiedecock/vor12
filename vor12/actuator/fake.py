@@ -1,4 +1,4 @@
-# -*- coding : utf-8 -*-
+# -*- coding: utf-8 -*-
 
 # VoR12
 
@@ -24,5 +24,16 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-__all__ = ['dynamixel_ax12',
-           'fake']
+from __future__ import print_function
+
+__all__ = ['FakeActuator']
+
+class FakeActuator(object):
+
+    def __init__(self):
+        pass
+
+
+    def apply_control(self, control_vect):
+        print(control_vect)
+
