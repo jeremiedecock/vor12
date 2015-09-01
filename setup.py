@@ -57,7 +57,10 @@ KEYWORDS = 'opencv image recognition dynamixel ax12 ax-12 servo actuator robotic
 # automatically with a recursive search (from the root directory of the
 # project).
 #PACKAGES = find_packages()
-PACKAGES = ['vor12']
+PACKAGES = ['vor12',
+            'vor12.actuator',
+            'vor12.computer_vision',
+            'vor12.controller']
 
 
 # The following list contains all dependencies that Python will try to
