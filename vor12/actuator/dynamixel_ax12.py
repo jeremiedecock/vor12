@@ -25,6 +25,7 @@
 # THE SOFTWARE.
 
 from pyax12.connection import Connection
+from pyax12.status_packet import AngleLimitError
 
 __all__ = ['DynamixelAX12']
 
@@ -91,16 +92,16 @@ class DynamixelAX12(object):
         pos_z = self.connection.get_present_position(self.dynamixel_z_axis_id)
 
         # The x_axis controls up/down movements
-        new_pos_x = pos_x - (int(control_vect[1]) * 10)
+        new_pos_x = pos_x - (int(control_vect[1]) * 5)
 
         # The z_axis controls left/right movements
         # Warning: movements are inverted on the z axis
         #          (negative commands move the frame to the right)
-        new_pos_z = pos_z - (int(control_vect[0]) * 10)
+        new_pos_z = pos_z - (int(control_vect[0]) * 5)
 
-        #try:
-        self.connection.goto(self.dynamixel_x_axis_id, new_pos_x, speed=512)
-        self.connection.goto(self.dynamixel_z_axis_id, new_pos_z, speed=512)
-        #except ...:
-        #    pass
+        try:
+            self.connection.goto(self.dynamixel_x_axis_id, new_pos_x, speed=300)
+            self.connection.goto(self.dynamixel_z_axis_id, new_pos_z, speed=300)
+        except AngleLimitError:
+            print("Angle limit")
 
