@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 # VoR12
@@ -42,7 +42,7 @@ CLASSIFIERS = ['Development Status :: 4 - Beta',
                'License :: OSI Approved :: MIT License',
                'Natural Language :: English',
                'Operating System :: OS Independent',
-               'Programming Language :: Python :: 2.7',
+               'Programming Language :: Python :: 3.4',
                'Topic :: Multimedia :: Video',
                'Topic :: Multimedia :: Video :: Capture',
                'Topic :: Scientific/Engineering :: Image Recognition',

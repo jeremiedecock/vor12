@@ -185,11 +185,14 @@ ccmake options::
     WITH_XINE                        OFF
 
 
+Path, ajouter à la fin de ``~/.bashrc``::
+
+    export PYTHONPATH=${PYTHONPATH}:~/bin/opencv3/lib/python3.4/dist-packages/
+
+
 Test::
 
     ipython3
-    import sys
-    sys.path.append("/home/jeremie/bin/opencv3/lib/python3.4/dist-packages/")
     import cv2
 
     print(cv2.__version__)

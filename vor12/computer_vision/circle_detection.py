@@ -40,8 +40,6 @@ See: https://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_im
      http://www.pyimagesearch.com/2014/07/21/detecting-circles-images-using-opencv-hough-circles/
 """
 
-from __future__ import print_function
-
 __all__ = ['CircleDetection']
 
 import cv2 as cv
@@ -141,7 +139,7 @@ class CircleDetection(object):
         # - maxRadius : the maximum radius of circles that can be found (radius
         #   in pixels). Should be proportional to the image size
         #   (self.img_bgr.shape[0] and self.img_bgr.shape[1]).
-        method = cv.cv.CV_HOUGH_GRADIENT  # The only method available is CV_HOUGH_GRADIENT
+        method = cv.HOUGH_GRADIENT  # The only method available is CV_HOUGH_GRADIENT
         dp = HCT_ACCUMULATOR_RESOLUTION   # The resolution of the accumumator.
         min_dist = max(self.img_bgr.shape[0], self.img_bgr.shape[1]) * 2   # The minimum distance between 2 circles.
         canny_edge_threshold = HCT_CANNY_EDGE_THRESHOLD
@@ -195,7 +193,7 @@ class CircleDetection(object):
             radius = target_radius
             color = (0, 255, 0)
             thickness = 2
-            line_type = cv.CV_AA  # Anti-Aliased
+            line_type = cv.LINE_AA  # Anti-Aliased
             cv.circle(image, center_point, radius, color, thickness, line_type)
 
             # Draw the center of the circle
@@ -203,7 +201,7 @@ class CircleDetection(object):
             radius = 2
             color = (0, 0, 255)
             thickness = 3
-            line_type = cv.CV_AA  # Anti-Aliased
+            line_type = cv.LINE_AA  # Anti-Aliased
             cv.circle(image, center_point, radius, color, thickness, line_type)
 
             # Draw the percept
@@ -213,6 +211,6 @@ class CircleDetection(object):
             font_scale = 0.75
             color = (0, 0, 255)
             thickness = 2
-            line_type = cv.CV_AA  # Anti-Aliased
+            line_type = cv.LINE_AA  # Anti-Aliased
             cv.putText(image, text, start_point, font, font_scale, color, thickness, line_type)
 

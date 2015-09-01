@@ -23,7 +23,7 @@ To search for bugs or report them, please use the VoR12 Bug Tracker at:
 Contribute
 ~~~~~~~~~~
 
-VoR12 is written for Python 2.x. Python 3.x is *not* supported yet.
+VoR12 is written for Python versions 3.4 and above. Python 2.x is *not* supported.
 
 The `TODO.md`_ file contains the TODO list.
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 # Copyright (c) 2015 Jérémie DECOCK (http://www.jdhp.org)
@@ -25,12 +25,10 @@ See: https://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_im
 # - [ ] Afficher dans une fenetre à part les couleurs "frame_lower_color" et "frame_upper_color"
 # - [ ] Afficher le canny edge detector utilisé en interne par Hough Circle Transform
 
-from __future__ import print_function
-
 import cv2 as cv
 import numpy as np
 import argparse
-import Tkinter as tk
+import tkinter as tk
 import threading
 
 DEFAULT_LOWER_COLOR_H = 105   # 110   # 105
@@ -181,7 +179,7 @@ def main():
 
             # Hough Circle Transform
             # See Oreilly's book "Learning OpenCV" (first edition) p.158 for details about Hough transforms.
-            # - method : the only method available is CV_HOUGH_GRADIENT so...
+            # - method : the only method available is HOUGH_GRADIENT so...
             # - dp : the resolution of the accumumator image used (allow to create
             #   an accumulator of a lower resolution than the input image). It must
             #   be greater or equal to 1. A value of "1" keep the original size; a
@@ -197,7 +195,7 @@ def main():
             # - maxRadius : the maximum radius of circles that can be found (radius
             #   in pixels). Should be proportional to the image size
             #   (img_bgr.shape[0] and img_bgr.shape[1]).
-            method = cv.cv.CV_HOUGH_GRADIENT  # The only method available is CV_HOUGH_GRADIENT
+            method = cv.HOUGH_GRADIENT  # The only method available is HOUGH_GRADIENT
             dp = scale_hct_accumulator_resolution.get()                          # The resolution of the accumumator.
             min_dist = max(img_bgr.shape[0], img_bgr.shape[1])   # The minimum distance between 2 circles.
             canny_edge_threshold = scale_hct_canny_edge_threshold.get()
@@ -217,7 +215,7 @@ def main():
                     radius = circle_i[2]
                     color = (0, 255, 0)
                     thickness = 2
-                    line_type = cv.CV_AA  # Anti-Aliased
+                    line_type = cv.LINE_AA  # Anti-Aliased
                     cv.circle(img_bgr, center_point, radius, color, thickness, line_type)
 
                     # draw the center of the circle
@@ -225,7 +223,7 @@ def main():
                     radius = 2
                     color = (0, 0, 255)
                     thickness = 3
-                    line_type = cv.CV_AA  # Anti-Aliased
+                    line_type = cv.LINE_AA  # Anti-Aliased
                     cv.circle(img_bgr, center_point, radius, color, thickness, line_type)
 
             # DISPLAY IMAGES ##################################

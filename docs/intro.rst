@@ -27,8 +27,8 @@ library for object tracking experiments.
 Dependencies
 ============
 
--  Python 2.7
--  `OpenCV`_ (v2)
+-  Python 3.4
+-  `OpenCV`_ versions 3.0.0 or above
 -  `PyAX-12`_
 -  `NumPy`_
 

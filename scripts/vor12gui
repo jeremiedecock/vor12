@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 # VoR12
@@ -31,10 +31,6 @@ Vor12
 Required: pyax12, numpy and opencv libraries
           (Debian: aptitude install python-numpy python-opencv)
 """
-
-# See: http://python-future.org/compatible_idioms.html
-from __future__ import print_function
-from __future__ import unicode_literals
 
 import argparse
 import cv2 as cv

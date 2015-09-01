@@ -24,8 +24,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-from __future__ import print_function
-
 __all__ = ['RuleBasedController']
 
 import cv2 as cv
@@ -110,7 +108,7 @@ class RuleBasedController(object):
             font_scale = 0.75
             color = (0, 0, 255)
             thickness = 2
-            line_type = cv.CV_AA  # Anti-Aliased
+            line_type = cv.LINE_AA  # Anti-Aliased
             cv.putText(image, ctrl_text, start_point, font, font_scale, color,
                        thickness, line_type)
 
