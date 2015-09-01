@@ -26,7 +26,7 @@ Section: video
 Priority: optional
 Maintainer: Jérémie DECOCK <jd.jdhp@gmail.com>
 Architecture: all
-Depends: python (>= 3.0), pyax12, python-opencv, python-numpy
+Depends: python (>= 2.7), pyax12, python-opencv, python-numpy
 Description: The Vor12 project, a mobile video camera created for object tracking experiments.
 EOF
 
