@@ -41,7 +41,7 @@ Dependencies
 .. 
 .. `Python-serial`_ is required to install VoR12.
 
-.. note::
+Note:
 
     If you use ``pip`` to install VoR12, PyAX-12 and Numpy will be
     automatically downloaded and installed (see the following install_
@@ -77,7 +77,7 @@ Or, if you have downloaded the VoR12 source code::
 Windows
 -------
 
-.. .. note::
+.. Note:
 .. 
 ..     The following installation procedure has been tested to work with Python
 ..     3.4 under Windows 7.
@@ -97,7 +97,7 @@ Or, if you have downloaded the VoR12 source code::
 MacOSX
 -------
 
-.. .. note::
+.. Note:
 .. 
 ..     The following installation procedure has been tested to work with Python
 ..     3.4 under MacOSX 10.6 (*Snow Leopard*).
