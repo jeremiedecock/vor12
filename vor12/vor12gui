@@ -39,8 +39,9 @@ from __future__ import unicode_literals
 import argparse
 import cv2 as cv
 
-import vor12.computer_vision.circle_detection as circle_detection
-import vor12.controller.rule_based_controller as rule_based_controller
+from vor12.actuator import dynamixel_ax12
+from vor12.computer_vision import circle_detection
+from vor12.controller import rule_based_controller
 
 def main():
 
@@ -55,6 +56,8 @@ def main():
     device_number = args.cameraid
 
     # OpenCV ##################################################################
+
+    actuators = dynamixel_ax12.DynamixelAX12()
 
     camera = circle_detection.CircleDetection(device_number)
 
@@ -80,7 +83,6 @@ def main():
             # COMPUTE CONTROL #################################
 
             control_vect = controller.compute_control(percept_vect)
-            print(control_vect)
 
             # FILTER CONTROL ##################################
 
@@ -89,8 +91,7 @@ def main():
 
             # APPLY CONTROL ###################################
 
-            # TODO
-            #actuator.apply_control(control_vect)
+            actuators.apply_control(control_vect)
 
 
         # SHOW IMAGES #####################################

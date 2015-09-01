@@ -1,4 +1,4 @@
-# -*- coding : utf-8 -*-
+# -*- coding: utf-8 -*-
 
 # VoR12
 
@@ -24,25 +24,16 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+from __future__ import print_function
 
-# PEP0440 compatible formatted version, see:
-# https://www.python.org/dev/peps/pep-0440/
-#
-# Generic release markers:
-# X.Y
-# X.Y.Z # For bugfix releases  
-# 
-# Admissible pre-release markers:
-# X.YaN # Alpha release
-# X.YbN # Beta release         
-# X.YrcN # Release Candidate   
-# X.Y # Final release
-#
-# Dev branch marker is: 'X.Y.dev' or 'X.Y.devN' where N is an integer.
-# 'X.Y.dev0' is the canonical version of 'X.Y.dev'
+__all__ = ['DynamixelAX12']
 
-__version__ = '0.2.dev6'
+class DynamixelAX12(object):
 
-__all__ = ['actuator',
-           'computer_vision',
-           'controller']
+    def __init__(self):
+        pass
+
+
+    def apply_control(self, control_vect):
+        print(control_vect)
+
