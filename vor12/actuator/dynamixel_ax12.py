@@ -51,8 +51,8 @@ class DynamixelAX12(object):
         self.connection.set_ccw_angle_limit(self.dynamixel_z_axis_id, 90,
                                             degrees=True)
 
-        # Goto the initial position (0°)
-        self.connection.goto(self.dynamixel_x_axis_id, 0, speed=255,
+        # Goto the initial position (-45°, 0°)
+        self.connection.goto(self.dynamixel_x_axis_id, -45, speed=255,
                              degrees=True)
         self.connection.goto(self.dynamixel_z_axis_id, 0, speed=255,
                              degrees=True)
@@ -64,7 +64,7 @@ class DynamixelAX12(object):
     def __del__(self):
         # TODO: set CW_ANGLE_LIMIT and CCW_ANGLE_LIMIT (+ alarms)
 
-        # Goto the initial position (0°)
+        # Restore the default position (0°, 0°)
         self.connection.goto(self.dynamixel_x_axis_id, 0, speed=255,
                              degrees=True)
         self.connection.goto(self.dynamixel_z_axis_id, 0, speed=255,
