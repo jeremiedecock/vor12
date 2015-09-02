@@ -100,9 +100,12 @@ class DynamixelAX12(object):
         #          (negative commands move the frame to the right)
         new_pos_z = pos_z - int(control_vect[0] * 20.)
 
+        speed_x = abs(int(control_vect[1] * 1023.))    # 300
+        speed_z = abs(int(control_vect[0] * 1023.))    # 300
+
         try:
-            self.connection.goto(self.dynamixel_x_axis_id, new_pos_x, speed=300)
-            self.connection.goto(self.dynamixel_z_axis_id, new_pos_z, speed=300)
+            self.connection.goto(self.dynamixel_x_axis_id, new_pos_x, speed=speed_x)
+            self.connection.goto(self.dynamixel_z_axis_id, new_pos_z, speed=speed_z)
         except AngleLimitError:
             print("Angle limit")
 
