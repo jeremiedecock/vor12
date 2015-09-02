@@ -40,6 +40,12 @@ MOTIONLESS_AREA_Y_RATIO = 0.3
 class RuleBasedController(object):
 
     def __init__(self, image_width, image_height):
+        self.img_width = image_width
+        self.img_height = image_height
+
+        self.img_center_x = image_width / 2
+        self.img_center_y = image_height / 2
+
         motionless_area_width = image_width * MOTIONLESS_AREA_X_RATIO
         motionless_area_height = image_height * MOTIONLESS_AREA_Y_RATIO
 
@@ -59,17 +65,21 @@ class RuleBasedController(object):
         # Control on the x axis (left/right position)
         ctrl_x = 0
         if target_center[0] < self.motionless_area_range_x[0]:
-            ctrl_x = -1
+            #ctrl_x = -1
+            ctrl_x = float(self.img_center_x - target_center[0]) / float(self.img_width / 2.)
         elif target_center[0] > self.motionless_area_range_x[1]:
-            ctrl_x = 1
+            #ctrl_x = 1
+            ctrl_x = float(self.img_center_x - target_center[0]) / float(self.img_width / 2.)
 
         # Control on the y axis (up/down position)
         # Warning: with OpenCV, the y axis is inverted (i.e. 0 is at the top)!
         ctrl_y = 0
         if target_center[1] < self.motionless_area_range_y[0]:
-            ctrl_y = 1
+            #ctrl_y = 1
+            ctrl_y = float(target_center[1] - self.img_center_y) / float(self.img_height / 2.)
         elif target_center[1] > self.motionless_area_range_y[1]:
-            ctrl_y = -1
+            #ctrl_y = -1
+            ctrl_y = float(target_center[1] - self.img_center_y) / float(self.img_height / 2.)
 
         # Control vect
         control_vect = np.array([ctrl_x, ctrl_y])

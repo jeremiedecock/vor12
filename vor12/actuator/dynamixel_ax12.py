@@ -93,12 +93,12 @@ class DynamixelAX12(object):
         print(pos_x, pos_z, control_vect)
 
         # The x_axis controls up/down movements
-        new_pos_x = pos_x + (int(control_vect[1]) * 5)
+        new_pos_x = pos_x + (int(control_vect[1]) * 20)
 
         # The z_axis controls left/right movements
         # Warning: movements are inverted on the z axis
         #          (negative commands move the frame to the right)
-        new_pos_z = pos_z - (int(control_vect[0]) * 5)
+        new_pos_z = pos_z - (int(control_vect[0]) * 20)
 
         try:
             self.connection.goto(self.dynamixel_x_axis_id, new_pos_x, speed=300)
