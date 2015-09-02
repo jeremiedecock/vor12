@@ -92,7 +92,7 @@ class DynamixelAX12(object):
         pos_z = self.connection.get_present_position(self.dynamixel_z_axis_id)
 
         # The x_axis controls up/down movements
-        new_pos_x = pos_x - (int(control_vect[1]) * 5)
+        new_pos_x = pos_x + (int(control_vect[1]) * 5)
 
         # The z_axis controls left/right movements
         # Warning: movements are inverted on the z axis
