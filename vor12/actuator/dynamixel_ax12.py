@@ -42,7 +42,7 @@ class DynamixelAX12(object):
         # Setup the angle limits fot the X axis
         self.connection.set_cw_angle_limit(self.dynamixel_x_axis_id, -90,
                                            degrees=True)
-        self.connection.set_ccw_angle_limit(self.dynamixel_x_axis_id, 45,
+        self.connection.set_ccw_angle_limit(self.dynamixel_x_axis_id, 90,
                                             degrees=True)
 
         # Setup the angle limits fot the Z axis
@@ -70,13 +70,13 @@ class DynamixelAX12(object):
         self.connection.goto(self.dynamixel_z_axis_id, 0, speed=255,
                              degrees=True)
 
-        # Setup the angle limits fot the X axis
+        # Setup the angle limits for the X axis
         self.connection.set_cw_angle_limit(self.dynamixel_x_axis_id,
                                            -150, degrees=True)
         self.connection.set_ccw_angle_limit(self.dynamixel_x_axis_id,
                                             150, degrees=True)
 
-        # Setup the angle limits fot the Z axis
+        # Setup the angle limits for the Z axis
         self.connection.set_cw_angle_limit(self.dynamixel_z_axis_id,
                                            -150, degrees=True)
         self.connection.set_ccw_angle_limit(self.dynamixel_z_axis_id,
@@ -86,10 +86,11 @@ class DynamixelAX12(object):
 
 
     def apply_control(self, control_vect):
-        print(control_vect)
 
         pos_x = self.connection.get_present_position(self.dynamixel_x_axis_id)
         pos_z = self.connection.get_present_position(self.dynamixel_z_axis_id)
+
+        print(pos_x, pos_z, control_vect)
 
         # The x_axis controls up/down movements
         new_pos_x = pos_x + (int(control_vect[1]) * 5)
@@ -100,8 +101,8 @@ class DynamixelAX12(object):
         new_pos_z = pos_z - (int(control_vect[0]) * 5)
 
         try:
-            self.connection.goto(self.dynamixel_x_axis_id, new_pos_x, speed=255)
-            self.connection.goto(self.dynamixel_z_axis_id, new_pos_z, speed=255)
+            self.connection.goto(self.dynamixel_x_axis_id, new_pos_x, speed=300)
+            self.connection.goto(self.dynamixel_z_axis_id, new_pos_z, speed=300)
         except AngleLimitError:
             print("Angle limit")
 
