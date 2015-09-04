@@ -24,6 +24,12 @@ library for object tracking experiments.
 .. - TODO...
 
 
+Demos
+=====
+
+|Video 1|_
+
+
 Dependencies
 ============
 
@@ -163,3 +169,6 @@ Or, if you have downloaded the VoR12 source code::
 
 .. |Photo 1| image:: http://download.tuxfamily.org/jdhp/image/small_vor12-2.jpeg
 .. _Photo 1: http://download.tuxfamily.org/jdhp/image/vor12-2.jpeg
+
+.. |Video 1| image:: http://download.tuxfamily.org/jdhp/image/vor12_demo_youtube.jpeg
+.. _Video 1: https://youtu.be/0HlRtU8clt4

@@ -11,6 +11,8 @@ Copyright (c) 2015 Jeremie DECOCK (http://www.jdhp.org)
 * Issue tracker: https://github.com/volab/vor12/issues
 * VoR12 on PyPI: https://pypi.python.org/pypi/vor12
 
+In collaboration with http://www.vorobotics.com
+
 
 Description
 ===========
@@ -24,6 +26,12 @@ library for object tracking experiments.
 Note:
 
     This project is still in beta stage, so the API is not finalized yet.
+
+
+Demos
+=====
+
+|Video 1|_
 
 
 Dependencies
@@ -141,3 +149,6 @@ The ``VoR12`` library is provided under the terms and conditions of the
 
 .. |Photo 1| image:: http://download.tuxfamily.org/jdhp/image/small_vor12-2.jpeg
 .. _Photo 1: http://download.tuxfamily.org/jdhp/image/vor12-2.jpeg
+
+.. |Video 1| image:: http://download.tuxfamily.org/jdhp/image/vor12_demo_youtube.jpeg
+.. _Video 1: https://youtu.be/0HlRtU8clt4

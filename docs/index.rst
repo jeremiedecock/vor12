@@ -23,6 +23,8 @@ Contents:
 * Issue tracker: https://github.com/volab/vor12/issues
 * VoR12 on PyPI: https://pypi.python.org/pypi/vor12
 
+In collaboration with http://www.vorobotics.com
+
 
 Indices and tables
 ==================
