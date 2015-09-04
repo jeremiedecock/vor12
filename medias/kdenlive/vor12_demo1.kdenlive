@@ -1,0 +1,360 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mlt title="Anonymous Submission" version="0.9.2" root="/home/jeremie/kdenlive" LC_NUMERIC="fr_FR.utf8">
+ <profile width="1280" display_aspect_den="9" colorspace="709" frame_rate_den="1" description="HD 720p 25 fps" height="720" display_aspect_num="16" frame_rate_num="25" progressive="1" sample_aspect_num="1" sample_aspect_den="1"/>
+ <producer in="0" out="500" id="black">
+  <property name="mlt_type">producer</property>
+  <property name="length">15000</property>
+  <property name="eof">pause</property>
+  <property name="resource">/home/jeremie/black</property>
+  <property name="aspect_ratio">0</property>
+  <property name="mlt_service">colour</property>
+ </producer>
+ <playlist id="black_track">
+  <entry in="0" out="2561" producer="black"/>
+ </playlist>
+ <playlist id="playlist1"/>
+ <playlist id="playlist2"/>
+ <playlist id="playlist3"/>
+ <playlist id="playlist4"/>
+ <producer in="0" out="124" id="1">
+  <property name="mlt_type">producer</property>
+  <property name="length">125</property>
+  <property name="eof">pause</property>
+  <property name="resource"/>
+  <property name="progressive">1</property>
+  <property name="mlt_service">kdenlivetitle</property>
+  <property name="xmldata">&lt;kdenlivetitle width="1280" duration="125" height="720" out="125" LC_NUMERIC="fr_FR.utf8">
+ &lt;item z-index="2" type="QGraphicsTextItem">
+  &lt;position x="397" y="650">
+   &lt;transform>1,0,0,0,1,0,0,0,1&lt;/transform>
+  &lt;/position>
+  &lt;content font-color="255,255,255,255" font-outline-color="0,0,0,255" font-pixel-size="28" font-italic="0" font-underline="0" font-weight="50" font="OpenSymbol" font-outline="0">https://pypi.python.org/pypi/vor12&lt;/content>
+ &lt;/item>
+ &lt;item z-index="1" type="QGraphicsTextItem">
+  &lt;position x="457" y="240">
+   &lt;transform>1,0,0,0,1,0,0,0,1&lt;/transform>
+  &lt;/position>
+  &lt;content font-color="255,255,255,255" font-pixel-size="100" font-italic="0" font-underline="0" font-weight="75" font="OpenSymbol">VoR12&lt;/content>
+ &lt;/item>
+ &lt;item z-index="1" type="QGraphicsTextItem">
+  &lt;position x="225" y="400">
+   &lt;transform>1,0,0,0,1,0,0,0,1&lt;/transform>
+  &lt;/position>
+  &lt;content font-color="255,255,255,255" font-pixel-size="50" font-italic="0" alignment="4" font-underline="0" font-weight="50" font="OpenSymbol">A mobile video camera
+for object tracking experiments&lt;/content>
+ &lt;/item>
+ &lt;startviewport rect="0,0,1280,720"/>
+ &lt;endviewport rect="0,0,1280,720"/>
+ &lt;background color="0,0,0,255"/>
+&lt;/kdenlivetitle>
+</property>
+  <property name="force_reload">0</property>
+  <property name="templatetext">title</property>
+ </producer>
+ <producer in="0" out="124" id="5">
+  <property name="mlt_type">producer</property>
+  <property name="length">125</property>
+  <property name="eof">pause</property>
+  <property name="resource"/>
+  <property name="progressive">1</property>
+  <property name="mlt_service">kdenlivetitle</property>
+  <property name="xmldata">&lt;kdenlivetitle width="1280" duration="125" height="720" out="125" LC_NUMERIC="fr_FR.utf8">
+ &lt;item z-index="1" type="QGraphicsTextItem">
+  &lt;position x="327" y="400">
+   &lt;transform>1,0,0,0,1,0,0,0,1&lt;/transform>
+  &lt;/position>
+  &lt;content font-color="255,255,255,255" font-pixel-size="60" font-italic="0" font-underline="0" font-weight="50" font="OpenSymbol">Follow the blue ball&lt;/content>
+ &lt;/item>
+ &lt;item z-index="0" type="QGraphicsTextItem">
+  &lt;position x="496" y="300">
+   &lt;transform>1,0,0,0,1,0,0,0,1&lt;/transform>
+  &lt;/position>
+  &lt;content font-color="255,255,255,255" font-pixel-size="60" font-italic="0" font-underline="0" font-weight="50" font="OpenSymbol">Demo #1&lt;/content>
+ &lt;/item>
+ &lt;startviewport rect="0,0,1280,720"/>
+ &lt;endviewport rect="0,0,1280,720"/>
+ &lt;background color="0,0,0,211"/>
+&lt;/kdenlivetitle>
+</property>
+  <property name="force_reload">0</property>
+  <property name="templatetext">demo1</property>
+ </producer>
+ <producer in="0" out="124" id="4">
+  <property name="mlt_type">producer</property>
+  <property name="length">125</property>
+  <property name="eof">pause</property>
+  <property name="resource"/>
+  <property name="progressive">1</property>
+  <property name="mlt_service">kdenlivetitle</property>
+  <property name="xmldata">&lt;kdenlivetitle width="1280" duration="125" height="720" out="125" LC_NUMERIC="fr_FR.utf8">
+ &lt;item z-index="0" type="QGraphicsTextItem">
+  &lt;position x="526" y="318">
+   &lt;transform>1,0,0,0,1,0,0,0,1&lt;/transform>
+  &lt;/position>
+  &lt;content font-color="255,255,255,255" font-outline-color="0,0,0,255" font-pixel-size="60" font-italic="0" font-underline="0" font-weight="50" font="OpenSymbol" font-outline="0">Test #1&lt;/content>
+ &lt;/item>
+ &lt;startviewport rect="0,0,1280,720"/>
+ &lt;endviewport rect="0,0,1280,720"/>
+ &lt;background color="0,0,0,211"/>
+&lt;/kdenlivetitle>
+</property>
+  <property name="force_reload">0</property>
+  <property name="templatetext">test_1</property>
+ </producer>
+ <producer in="0" out="865" id="3">
+  <property name="mlt_type">producer</property>
+  <property name="length">866</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/jeremie/hdd2To/medias/photos/fablab/MVI_5909.MOV</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1920</property>
+  <property name="meta.media.0.codec.height">1080</property>
+  <property name="meta.media.0.codec.frame_rate">inf</property>
+  <property name="meta.media.0.codec.pix_fmt">yuvj420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.colorspace">709</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">44727073</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2015-09-02 21:39:12</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">s16</property>
+  <property name="meta.media.1.codec.sample_rate">48000</property>
+  <property name="meta.media.1.codec.channels">2</property>
+  <property name="meta.media.1.codec.name">pcm_s16le</property>
+  <property name="meta.media.1.codec.long_name">PCM signed 16-bit little-endian</property>
+  <property name="meta.media.1.codec.bit_rate">0</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2015-09-02 21:39:12</property>
+  <property name="meta.attr.1.stream.language.markup">eng</property>
+  <property name="meta.attr.major_brand.markup">qt  </property>
+  <property name="meta.attr.minor_version.markup">537331968</property>
+  <property name="meta.attr.compatible_brands.markup">qt  CAEP</property>
+  <property name="meta.attr.creation_time.markup">2015-09-02 21:39:12</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.width">1920</property>
+  <property name="meta.media.height">1080</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="124" id="6">
+  <property name="mlt_type">producer</property>
+  <property name="length">125</property>
+  <property name="eof">pause</property>
+  <property name="resource"/>
+  <property name="progressive">1</property>
+  <property name="mlt_service">kdenlivetitle</property>
+  <property name="xmldata">&lt;kdenlivetitle width="1280" duration="125" height="720" out="125" LC_NUMERIC="fr_FR.utf8">
+ &lt;item z-index="0" type="QGraphicsTextItem">
+  &lt;position x="526" y="318">
+   &lt;transform>1,0,0,0,1,0,0,0,1&lt;/transform>
+  &lt;/position>
+  &lt;content font-color="255,255,255,255" font-outline-color="0,0,0,255" font-pixel-size="60" font-italic="0" font-underline="0" font-weight="50" font="OpenSymbol" font-outline="0">Test #2&lt;/content>
+ &lt;/item>
+ &lt;startviewport rect="0,0,1280,720"/>
+ &lt;endviewport rect="0,0,1280,720"/>
+ &lt;background color="0,0,0,211"/>
+&lt;/kdenlivetitle>
+</property>
+  <property name="force_reload">0</property>
+  <property name="templatetext">test_2</property>
+ </producer>
+ <producer in="0" out="1612" id="2">
+  <property name="mlt_type">producer</property>
+  <property name="length">1613</property>
+  <property name="eof">pause</property>
+  <property name="resource">/media/jeremie/hdd2To/medias/photos/fablab/MVI_5907.MOV</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">25</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1920</property>
+  <property name="meta.media.0.codec.height">1080</property>
+  <property name="meta.media.0.codec.frame_rate">inf</property>
+  <property name="meta.media.0.codec.pix_fmt">yuvj420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.colorspace">709</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">44952311</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2015-09-02 21:36:54</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.media.1.stream.type">audio</property>
+  <property name="meta.media.1.codec.sample_fmt">s16</property>
+  <property name="meta.media.1.codec.sample_rate">48000</property>
+  <property name="meta.media.1.codec.channels">2</property>
+  <property name="meta.media.1.codec.name">pcm_s16le</property>
+  <property name="meta.media.1.codec.long_name">PCM signed 16-bit little-endian</property>
+  <property name="meta.media.1.codec.bit_rate">0</property>
+  <property name="meta.attr.1.stream.creation_time.markup">2015-09-02 21:36:54</property>
+  <property name="meta.attr.1.stream.language.markup">eng</property>
+  <property name="meta.attr.major_brand.markup">qt  </property>
+  <property name="meta.attr.minor_version.markup">537331968</property>
+  <property name="meta.attr.compatible_brands.markup">qt  CAEP</property>
+  <property name="meta.attr.creation_time.markup">2015-09-02 21:36:54</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">1</property>
+  <property name="video_index">0</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">25</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.width">1920</property>
+  <property name="meta.media.height">1080</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="124" id="7">
+  <property name="mlt_type">producer</property>
+  <property name="length">125</property>
+  <property name="eof">pause</property>
+  <property name="resource"/>
+  <property name="progressive">1</property>
+  <property name="mlt_service">kdenlivetitle</property>
+  <property name="xmldata">&lt;kdenlivetitle width="1280" duration="125" height="720" out="125" LC_NUMERIC="fr_FR.utf8">
+ &lt;item z-index="0" type="QGraphicsTextItem">
+  &lt;position x="130" y="400">
+   &lt;transform>1,0,0,0,1,0,0,0,1&lt;/transform>
+  &lt;/position>
+  &lt;content font-color="255,255,255,255" font-outline-color="0,0,0,255" font-pixel-size="60" font-italic="0" font-underline="0" font-weight="50" font="OpenSymbol" font-outline="0">https://pypi.python.org/pypi/vor12&lt;/content>
+ &lt;/item>
+ &lt;item z-index="0" type="QGraphicsTextItem">
+  &lt;position x="377" y="300">
+   &lt;transform>1,0,0,0,1,0,0,0,1&lt;/transform>
+  &lt;/position>
+  &lt;content font-color="255,255,255,255" font-pixel-size="60" font-italic="0" font-underline="0" font-weight="50" font="OpenSymbol">Official web site:&lt;/content>
+ &lt;/item>
+ &lt;startviewport rect="0,0,1280,720"/>
+ &lt;endviewport rect="0,0,1280,720"/>
+ &lt;background color="0,0,0,211"/>
+&lt;/kdenlivetitle>
+</property>
+  <property name="force_reload">0</property>
+  <property name="templatetext">end</property>
+ </producer>
+ <playlist id="playlist5">
+  <entry in="0" out="74" producer="1"/>
+  <entry in="0" out="74" producer="5"/>
+  <entry in="0" out="24" producer="4"/>
+  <entry in="0" out="658" producer="3"/>
+  <entry in="0" out="24" producer="6"/>
+  <entry in="0" out="1577" producer="2"/>
+  <entry in="0" out="124" producer="7"/>
+ </playlist>
+ <tractor title="Anonymous Submission" global_feed="1" in="0" out="2561" id="maintractor">
+  <property name="meta.volume">1</property>
+  <track producer="black_track"/>
+  <track hide="video" producer="playlist1"/>
+  <track hide="video" producer="playlist2"/>
+  <track producer="playlist3"/>
+  <track hide="video" producer="playlist4"/>
+  <track producer="playlist5"/>
+  <transition id="transition0">
+   <property name="a_track">1</property>
+   <property name="b_track">2</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">mix</property>
+   <property name="always_active">1</property>
+   <property name="combine">1</property>
+   <property name="internal_added">237</property>
+  </transition>
+  <transition id="transition1">
+   <property name="a_track">1</property>
+   <property name="b_track">3</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">mix</property>
+   <property name="always_active">1</property>
+   <property name="combine">1</property>
+   <property name="internal_added">237</property>
+  </transition>
+  <transition id="transition2">
+   <property name="a_track">1</property>
+   <property name="b_track">4</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">mix</property>
+   <property name="always_active">1</property>
+   <property name="combine">1</property>
+   <property name="internal_added">237</property>
+  </transition>
+  <transition id="transition3">
+   <property name="a_track">1</property>
+   <property name="b_track">5</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">mix</property>
+   <property name="always_active">1</property>
+   <property name="combine">1</property>
+   <property name="internal_added">237</property>
+  </transition>
+  <transition in="125" out="149" id="transition4">
+   <property name="a_track">0</property>
+   <property name="b_track">5</property>
+   <property name="factory">loader</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">luma</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">dissolve</property>
+   <property name="force_track">1</property>
+   <property name="reverse">1</property>
+  </transition>
+ </tractor>
+ <kdenlivedoc profile="hdv_720_25p" kdenliveversion="0.9.10" version="0,88" projectfolder="/home/jeremie/kdenlive">
+  <customeffects/>
+  <documentproperties documentid="1441368834224" renderaudiobitrate="128" renderdestination="" renderrescalewidth="1280" proxyextension="ts" generateproxy="0" proxyimageminsize="2000" rendertctype="0" verticalzoom="1" renderprofile="H.264/AAC High Profile" renderrescaleheight="720" zonein="0" renderrescale="1" renderscanning="1" renderurl="/home/jeremie/kdenlive/vor12_demo1.mp4" rendertwopass="0" renderplay="0" position="0" proxyminsize="1000" renderstartguide="-1" zoom="3" rendercategory="MP4" renderratio="1" zoneout="100" renderbitrate="20" renderzone="0" renderendguide="-1" renderexportaudio="0" proxyparams="-f mpegts -acodec libmp3lame -ac 2 -ab 128k -vcodec mpeg2video -g 5 -s 640x480 -qscale 7" enableproxy="0" generateimageproxy="0" renderguide="0" rendertcoverlay="0"/>
+  <documentmetadata/>
+  <documentnotes>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'DejaVu Sans'; font-size:8pt; font-weight:400; font-style:normal;">
+&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;br />&lt;/p>&lt;/body>&lt;/html></documentnotes>
+  <profileinfo width="1280" display_aspect_den="9" frame_rate_den="1" description="HD 720p 25 fps" height="720" frame_rate_num="25" display_aspect_num="16" progressive="1" sample_aspect_num="1" sample_aspect_den="1"/>
+  <tracksinfo>
+   <trackinfo blind="1" mute="0" locked="0" trackname="Audio 2" type="audio"/>
+   <trackinfo blind="1" mute="0" locked="0" trackname="Audio 1" type="audio"/>
+   <trackinfo blind="0" mute="0" locked="0" trackname="Video 3"/>
+   <trackinfo blind="1" mute="0" locked="0" trackname="Video 2"/>
+   <trackinfo blind="0" mute="0" locked="0" trackname="Video 1"/>
+  </tracksinfo>
+  <kdenlive_producer duration="125" transparency="1" frame_size="1280x720" in="0" analysisdata="" description="title" templatetext="title" aspect_ratio="0" out="124" xmldata="&lt;kdenlivetitle width=&quot;1280&quot; duration=&quot;125&quot; height=&quot;720&quot; out=&quot;125&quot; LC_NUMERIC=&quot;fr_FR.utf8&quot;>&#xa; &lt;item z-index=&quot;2&quot; type=&quot;QGraphicsTextItem&quot;>&#xa;  &lt;position x=&quot;397&quot; y=&quot;650&quot;>&#xa;   &lt;transform>1,0,0,0,1,0,0,0,1&lt;/transform>&#xa;  &lt;/position>&#xa;  &lt;content font-color=&quot;255,255,255,255&quot; font-outline-color=&quot;0,0,0,255&quot; font-pixel-size=&quot;28&quot; font-italic=&quot;0&quot; font-underline=&quot;0&quot; font-weight=&quot;50&quot; font=&quot;OpenSymbol&quot; font-outline=&quot;0&quot;>https://pypi.python.org/pypi/vor12&lt;/content>&#xa; &lt;/item>&#xa; &lt;item z-index=&quot;1&quot; type=&quot;QGraphicsTextItem&quot;>&#xa;  &lt;position x=&quot;457&quot; y=&quot;240&quot;>&#xa;   &lt;transform>1,0,0,0,1,0,0,0,1&lt;/transform>&#xa;  &lt;/position>&#xa;  &lt;content font-color=&quot;255,255,255,255&quot; font-pixel-size=&quot;100&quot; font-italic=&quot;0&quot; font-underline=&quot;0&quot; font-weight=&quot;75&quot; font=&quot;OpenSymbol&quot;>VoR12&lt;/content>&#xa; &lt;/item>&#xa; &lt;item z-index=&quot;1&quot; type=&quot;QGraphicsTextItem&quot;>&#xa;  &lt;position x=&quot;225&quot; y=&quot;400&quot;>&#xa;   &lt;transform>1,0,0,0,1,0,0,0,1&lt;/transform>&#xa;  &lt;/position>&#xa;  &lt;content font-color=&quot;255,255,255,255&quot; font-pixel-size=&quot;50&quot; font-italic=&quot;0&quot; alignment=&quot;4&quot; font-underline=&quot;0&quot; font-weight=&quot;50&quot; font=&quot;OpenSymbol&quot;>A mobile video camera&#xa;for object tracking experiments&lt;/content>&#xa; &lt;/item>&#xa; &lt;startviewport rect=&quot;0,0,1280,720&quot;/>&#xa; &lt;endviewport rect=&quot;0,0,1280,720&quot;/>&#xa; &lt;background color=&quot;0,0,0,255&quot;/>&#xa;&lt;/kdenlivetitle>&#xa;" type="6" id="1" name="titre"/>
+  <kdenlive_producer audio_max="13" id="2" pix_fmt="yuvj420p" default_video="0" fps="25" analysisdata="" name="MVI_5907.MOV" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/jeremie/hdd2To/medias/photos/fablab/MVI_5907.MOV" default_audio="1" audiocodec="PCM signed 16-bit little-endian" duration="1613" file_hash="52852c8400e3b5da40aae89f405448ab" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1920x1080" file_size="375033016">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2015-09-02 21:36:54</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2015-09-02 21:36:54</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">qt  CAEP</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2015-09-02 21:36:54</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">qt  </metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">537331968</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="16" id="3" pix_fmt="yuvj420p" default_video="0" fps="25" analysisdata="" name="MVI_5909.MOV" videocodecid="h264" colorspace="709" videocodec="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10" resource="/media/jeremie/hdd2To/medias/photos/fablab/MVI_5909.MOV" default_audio="1" audiocodec="PCM signed 16-bit little-endian" duration="866" file_hash="4db50bef35d4ef01fc51fe9eb3018843" aspect_ratio="1" channels="2" frequency="48000" video_max="0" progressive="1" type="3" frame_size="1920x1080" file_size="200420900">
+   <metaproperty tool="" name="meta.attr.0.stream.creation_time">2015-09-02 21:39:12</metaproperty>
+   <metaproperty tool="" name="meta.attr.0.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.creation_time">2015-09-02 21:39:12</metaproperty>
+   <metaproperty tool="" name="meta.attr.1.stream.language">eng</metaproperty>
+   <metaproperty tool="" name="meta.attr.compatible_brands">qt  CAEP</metaproperty>
+   <metaproperty tool="" name="meta.attr.creation_time">2015-09-02 21:39:12</metaproperty>
+   <metaproperty tool="" name="meta.attr.major_brand">qt  </metaproperty>
+   <metaproperty tool="" name="meta.attr.minor_version">537331968</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer duration="125" transparency="1" frame_size="1280x720" thumbnail="100" in="0" analysisdata="" description="test_1" templatetext="test_1" aspect_ratio="0" out="124" xmldata="&lt;kdenlivetitle width=&quot;1280&quot; duration=&quot;125&quot; height=&quot;720&quot; out=&quot;125&quot; LC_NUMERIC=&quot;fr_FR.utf8&quot;>&#xa; &lt;item z-index=&quot;0&quot; type=&quot;QGraphicsTextItem&quot;>&#xa;  &lt;position x=&quot;526&quot; y=&quot;318&quot;>&#xa;   &lt;transform>1,0,0,0,1,0,0,0,1&lt;/transform>&#xa;  &lt;/position>&#xa;  &lt;content font-color=&quot;255,255,255,255&quot; font-outline-color=&quot;0,0,0,255&quot; font-pixel-size=&quot;60&quot; font-italic=&quot;0&quot; font-underline=&quot;0&quot; font-weight=&quot;50&quot; font=&quot;OpenSymbol&quot; font-outline=&quot;0&quot;>Test #1&lt;/content>&#xa; &lt;/item>&#xa; &lt;startviewport rect=&quot;0,0,1280,720&quot;/>&#xa; &lt;endviewport rect=&quot;0,0,1280,720&quot;/>&#xa; &lt;background color=&quot;0,0,0,211&quot;/>&#xa;&lt;/kdenlivetitle>&#xa;" type="6" id="4" name="test1"/>
+  <kdenlive_producer duration="125" transparency="1" frame_size="1280x720" thumbnail="100" in="0" analysisdata="" description="demo1" templatetext="demo1" aspect_ratio="0" out="124" xmldata="&lt;kdenlivetitle width=&quot;1280&quot; duration=&quot;125&quot; height=&quot;720&quot; out=&quot;125&quot; LC_NUMERIC=&quot;fr_FR.utf8&quot;>&#xa; &lt;item z-index=&quot;1&quot; type=&quot;QGraphicsTextItem&quot;>&#xa;  &lt;position x=&quot;327&quot; y=&quot;400&quot;>&#xa;   &lt;transform>1,0,0,0,1,0,0,0,1&lt;/transform>&#xa;  &lt;/position>&#xa;  &lt;content font-color=&quot;255,255,255,255&quot; font-pixel-size=&quot;60&quot; font-italic=&quot;0&quot; font-underline=&quot;0&quot; font-weight=&quot;50&quot; font=&quot;OpenSymbol&quot;>Follow the blue ball&lt;/content>&#xa; &lt;/item>&#xa; &lt;item z-index=&quot;0&quot; type=&quot;QGraphicsTextItem&quot;>&#xa;  &lt;position x=&quot;496&quot; y=&quot;300&quot;>&#xa;   &lt;transform>1,0,0,0,1,0,0,0,1&lt;/transform>&#xa;  &lt;/position>&#xa;  &lt;content font-color=&quot;255,255,255,255&quot; font-pixel-size=&quot;60&quot; font-italic=&quot;0&quot; font-underline=&quot;0&quot; font-weight=&quot;50&quot; font=&quot;OpenSymbol&quot;>Demo #1&lt;/content>&#xa; &lt;/item>&#xa; &lt;startviewport rect=&quot;0,0,1280,720&quot;/>&#xa; &lt;endviewport rect=&quot;0,0,1280,720&quot;/>&#xa; &lt;background color=&quot;0,0,0,211&quot;/>&#xa;&lt;/kdenlivetitle>&#xa;" type="6" id="5" name="demo1"/>
+  <kdenlive_producer duration="125" transparency="1" frame_size="1280x720" thumbnail="100" in="0" analysisdata="" description="test_2" templatetext="test_2" aspect_ratio="0" out="124" xmldata="&lt;kdenlivetitle width=&quot;1280&quot; duration=&quot;125&quot; height=&quot;720&quot; out=&quot;125&quot; LC_NUMERIC=&quot;fr_FR.utf8&quot;>&#xa; &lt;item z-index=&quot;0&quot; type=&quot;QGraphicsTextItem&quot;>&#xa;  &lt;position x=&quot;526&quot; y=&quot;318&quot;>&#xa;   &lt;transform>1,0,0,0,1,0,0,0,1&lt;/transform>&#xa;  &lt;/position>&#xa;  &lt;content font-color=&quot;255,255,255,255&quot; font-outline-color=&quot;0,0,0,255&quot; font-pixel-size=&quot;60&quot; font-italic=&quot;0&quot; font-underline=&quot;0&quot; font-weight=&quot;50&quot; font=&quot;OpenSymbol&quot; font-outline=&quot;0&quot;>Test #2&lt;/content>&#xa; &lt;/item>&#xa; &lt;startviewport rect=&quot;0,0,1280,720&quot;/>&#xa; &lt;endviewport rect=&quot;0,0,1280,720&quot;/>&#xa; &lt;background color=&quot;0,0,0,211&quot;/>&#xa;&lt;/kdenlivetitle>&#xa;" type="6" id="6" name="test2"/>
+  <kdenlive_producer duration="125" transparency="1" frame_size="1280x720" thumbnail="100" in="0" analysisdata="" description="end" templatetext="end" aspect_ratio="0" out="124" xmldata="&lt;kdenlivetitle width=&quot;1280&quot; duration=&quot;125&quot; height=&quot;720&quot; out=&quot;125&quot; LC_NUMERIC=&quot;fr_FR.utf8&quot;>&#xa; &lt;item z-index=&quot;0&quot; type=&quot;QGraphicsTextItem&quot;>&#xa;  &lt;position x=&quot;130&quot; y=&quot;400&quot;>&#xa;   &lt;transform>1,0,0,0,1,0,0,0,1&lt;/transform>&#xa;  &lt;/position>&#xa;  &lt;content font-color=&quot;255,255,255,255&quot; font-outline-color=&quot;0,0,0,255&quot; font-pixel-size=&quot;60&quot; font-italic=&quot;0&quot; font-underline=&quot;0&quot; font-weight=&quot;50&quot; font=&quot;OpenSymbol&quot; font-outline=&quot;0&quot;>https://pypi.python.org/pypi/vor12&lt;/content>&#xa; &lt;/item>&#xa; &lt;item z-index=&quot;0&quot; type=&quot;QGraphicsTextItem&quot;>&#xa;  &lt;position x=&quot;377&quot; y=&quot;300&quot;>&#xa;   &lt;transform>1,0,0,0,1,0,0,0,1&lt;/transform>&#xa;  &lt;/position>&#xa;  &lt;content font-color=&quot;255,255,255,255&quot; font-pixel-size=&quot;60&quot; font-italic=&quot;0&quot; font-underline=&quot;0&quot; font-weight=&quot;50&quot; font=&quot;OpenSymbol&quot;>Official web site:&lt;/content>&#xa; &lt;/item>&#xa; &lt;startviewport rect=&quot;0,0,1280,720&quot;/>&#xa; &lt;endviewport rect=&quot;0,0,1280,720&quot;/>&#xa; &lt;background color=&quot;0,0,0,211&quot;/>&#xa;&lt;/kdenlivetitle>&#xa;" type="6" id="7" name="end"/>
+  <markers/>
+  <groups/>
+ </kdenlivedoc>
+</mlt>
