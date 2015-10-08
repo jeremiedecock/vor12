@@ -1,5 +1,5 @@
 // A base board for the VoR-12 project
-// This 2D OpenSCAD file can be used with a laser cutting machine or a CNC
+// This 3D OpenSCAD file can be used with a 3D printer
 
 // The MIT License
 //
@@ -23,48 +23,20 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-// To export this file to the DXF format:
+// To export this file to the STL format:
 //
-//    openscad -o 2d_foot.dxf 2d_foot.scad
+//    openscad -o 3d_foot.stl 3d_foot.scad
 // 
 // Requirement: openscad
 // Base unit: mm
 
-module 2d_foot() {
-    $fn=50;
+use <2d_foot.scad>
 
-    inner_square_size = 33;
-    outer_square_size = 105;
-    screw_hole_diameter = 3;
-
-    difference() {
-        union() {
-            square(outer_square_size, center=true);
-            rotate(45) 2d_toe();
-            rotate(135) 2d_toe();
-            rotate(-45) 2d_toe();
-            rotate(-135) 2d_toe();
-        }
-
-        union() {
-            square(inner_square_size, center=true);
-            translate([-31.5,    0]) circle(d=screw_hole_diameter);
-            translate([ 31.5,    0]) circle(d=screw_hole_diameter);
-            translate([    0, 38.5]) circle(d=screw_hole_diameter);
-        }
+module 3d_foot() {
+    linear_extrude(height=5, center=true, convexity=10, twist=0) {
+        2d_foot();
     }
 }
 
-module 2d_toe() {
-    $fn=50;
+3d_foot();
 
-    toe_depth = 25;
-    toe_length = 80;
-
-    hull() {
-        square(toe_depth, center=true);
-        translate([toe_length, 0]) circle(d=toe_depth);
-    }
-}
-
-2d_foot();
