@@ -56,8 +56,8 @@ UPPER_COLOR_V = 180
 HCT_ACCUMULATOR_RESOLUTION = 1.2
 HCT_CANNY_EDGE_THRESHOLD = 50
 HCT_ACCUMULATOR_THRESHOLD = 10
-HCT_MIN_RADIUS = 0
-HCT_MAX_RADIUS = 0
+HCT_MIN_RADIUS = 25
+HCT_MAX_RADIUS = 1000
 
 class CircleDetection(object):
     """Use Hough Circle Transform in OpenCV to detect the target: a colored circle.
