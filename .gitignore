@@ -3,7 +3,7 @@ doc_dynamixel
 __pycache__/
 build/
 dist/
-vor12.egg-info/
+*.egg-info/
 *.swp
 *.pyc
 *.pyo
