@@ -2,6 +2,17 @@
 
 ## Vor12-A
 
+- [ ] Use the former description ("sentinel" project)
+        track objects/animals/persons with a camera and 2 servomotors.
+
+        Uses OpenCV for "target" detection and motor control.
+
+        La partie "motor control" est très simple, pas besoin de cinematique inverce etc.
+        il suffit de mesurer la distance x et y du centre de la cible au centre de l'écran
+        et d'activer proportionellement les moteurs (commande en vitesse et non pas en position):
+
+        command_motor_x = delta_x_target_center * a_fixed_coef
+        command_motor_y = delta_y_target_center * a_fixed_coef
 - [ ] Control
     - [ ] Let pyax12 works as an external library
     - [ ] Write a first simple controller: if the center is out of a given window, go to that direction
