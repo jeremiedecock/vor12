@@ -2,6 +2,7 @@
 
 ## Vor12-A
 
+- [ ] Put the "cad" directory in a dedicated git repository ("jdhp-misc/cad-vor12") ?
 - [ ] Use the former description ("sentinel" project)
         track objects/animals/persons with a camera and 2 servomotors.
 
